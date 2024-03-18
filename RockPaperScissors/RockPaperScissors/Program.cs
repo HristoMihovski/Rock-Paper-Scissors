@@ -3,16 +3,19 @@ const string Paper = "Paper";
 const string Scissors = "Scissors";
 Console.Write("Choose [r]ock, [p]aper or [s]cissors: ");
 string playerMove = Console.ReadLine();
-if  (playerMove == "r" || playerMove == "rock")
+if (playerMove == "r" || playerMove == "rock")
 {
     playerMove = Rock;
-} else if (playerMove == "p" || playerMove == "paper")
+}
+else if (playerMove == "p" || playerMove == "paper")
 {
-    playerMove == Paper;
-} else if (playerMove == "s" || playerMove == "scissors")
+    playerMove = Paper;
+}
+else if (playerMove == "s" || playerMove == "scissors")
 {
     playerMove = Scissors;
-} else
+}
+else
 {
     Console.WriteLine("Invalid Input. Try Again...");
     return;
@@ -39,9 +42,12 @@ Console.WriteLine($"The computer chose {computerMove}.");
 if ((playerMove == Rock && computerMove == Scissors) || (playerMove == Paper && computerMove == Rock) || (playerMove == Scissors && computerMove == Paper))
 {
     Console.WriteLine("You win.");
-} else if ((playerMove == Scissors && computerMove == Rock) || (playerMove == Rock && computerMove == Paper) || (playerMove == Paper && computerMove == Scissors)) {
+}
+else if ((playerMove == Scissors && computerMove == Rock) || (playerMove == Rock && computerMove == Paper) || (playerMove == Paper && computerMove == Scissors))
+{
     Console.WriteLine("You lose.");
-} else
+}
+else
 {
     Console.WriteLine("This game was a draw.");
 }
